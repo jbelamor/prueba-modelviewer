@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis modelos 3D</title>
+
+  <!-- Cargar model-viewer desde CDN de Google -->
+  <script type="module" 
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+  </script>
+
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #111; color: white; }
+    h1 { text-align: center; padding: 1rem; }
+    .galeria { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; padding: 1rem; }
+    model-viewer {
+      width: 100%;
+      height: 350px;
+      background: #222;
+      border-radius: 12px;
+    }
+    p { text-align: center; margin: 0.5rem 0; }
+  </style>
+</head>
+<body>
+  <h1>Mis modelos 3D</h1>
+
+  <div class="galeria">
+
+    <div>
+      <model-viewer
+        src="nikola_tesla.glb"
+        alt="Modelo 1"
+        camera-controls
+        auto-rotate
+        ar
+        shadow-intensity="1"
+        touch-action="pan-y">
+      </model-viewer>
+      <p>Modelo 1</p>
+    </div>
+  </div>
+</body>
+</html>
